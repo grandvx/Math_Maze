@@ -28,12 +28,12 @@ The link from the virtual course to the LMS should be included in your report, a
 
 ## Β. Analysis & Design
 
-In order to achieve the objectives of the educational application/ serious game it is important to:
+### In order to achieve the objectives of the educational application/ serious game it is important to:
 
-### Clearly define the objective of the application and the learners (age, gender, culture, etc.) it is aimed at and the expected benefits.
-### Pay attention to the content and activities to be incorporated to achieve the objectives of the application, which should be accurate and complete.
-### The learner should learn as he or she interacts with the application.
-### The potential benefits should be commensurate with the workload and time required to complete the activities.
-### Rewards & incentives are provided as recognition of achievements, but also as motivation for those close to the target to try harder.
-### The application should provide feedback to the player especially in case of mistakes.
-### The application should provide structured scaffolding for the player to achieve the defined goals.
+1) Clearly define the objective of the application and the learners (age, gender, culture, etc.) it is aimed at and the expected benefits.
+2) Pay attention to the content and activities to be incorporated to achieve the objectives of the application, which should be accurate and complete.
+3) The learner should learn as he or she interacts with the application.
+4) The potential benefits should be commensurate with the workload and time required to complete the activities.
+5) Rewards & incentives are provided as recognition of achievements, but also as motivation for those close to the target to try harder.
+6) The application should provide feedback to the player especially in case of mistakes.
+7) The application should provide structured scaffolding for the player to achieve the defined goals.
