@@ -5,26 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-<<<<<<< Updated upstream
-      ticks: 638307320388962499
-    m_Hash: 4013268514
-=======
-      ticks: 638307249651575484
-    m_Hash: 3184230455
->>>>>>> Stashed changes
+      ticks: 638307323380120998
+    m_Hash: 520515789
   m_LockFileStatus:
     m_FilePath: C:/Users/keray/OneDrive/Documents/GitHub/Math_Maze/Math Maze/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-<<<<<<< Updated upstream
-      ticks: 638307320388967468
-    m_Hash: 2295194746
-=======
-      ticks: 638307249651620385
-    m_Hash: 1173711269
->>>>>>> Stashed changes
+      ticks: 638307323380125967
+    m_Hash: 2841956530
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
