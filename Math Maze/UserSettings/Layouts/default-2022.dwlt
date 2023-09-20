@@ -19,7 +19,11 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
+<<<<<<< Updated upstream
   m_Title: Project
+=======
+  m_Title: Game
+>>>>>>> Stashed changes
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -766,7 +770,11 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: -0.3623639, y: -0.0022398224, z: 0.0008671616, w: -0.9320195}
     speed: 2
+<<<<<<< Updated upstream
     m_Value: {x: -0.36236867, y: -0.002239852, z: 0.000867173, w: -0.93203175}
+=======
+    m_Value: {x: 0.1284927, y: -0.083203934, z: 0.010844568, w: 0.9881544}
+>>>>>>> Stashed changes
   m_Size:
     m_Target: 1.224745
     speed: 2
@@ -947,15 +955,25 @@ MonoBehaviour:
   m_StartGridSize: 64
   m_LastFolders:
   - Assets
+<<<<<<< Updated upstream
   m_LastFoldersGridSize: -1
+=======
+  m_LastFoldersGridSize: 74
+>>>>>>> Stashed changes
   m_LastProjectPath: C:\Users\keray\Unity3d\Math Maze
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< Updated upstream
     m_SelectedIDs: 1c5b0000
     m_LastClickedID: 23324
     m_ExpandedIDs: 000000001c5b0000
+=======
+    m_SelectedIDs: b85c0000
+    m_LastClickedID: 23736
+    m_ExpandedIDs: 00000000b85c0000d45c0000
+>>>>>>> Stashed changes
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
