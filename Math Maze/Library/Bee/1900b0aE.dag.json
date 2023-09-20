@@ -20487,7 +20487,11 @@
       "DisplayName": "Writing Assembly-CSharp.rsp",
       "ActionType": "WriteFile",
       "PayloadOffset": 1544966,
+<<<<<<< HEAD
       "PayloadLength": 33000,
+=======
+      "PayloadLength": 32849,
+>>>>>>> Antonis
       "PayloadDebugContentSnippet": "-target:library\r\n-out:\"Library",
       "Inputs": [],
       "Outputs": [
@@ -20499,7 +20503,11 @@
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.rsp2",
       "DisplayName": "Writing Assembly-CSharp.rsp2",
       "ActionType": "WriteFile",
+<<<<<<< HEAD
       "PayloadOffset": 1578053,
+=======
+      "PayloadOffset": 1577902,
+>>>>>>> Antonis
       "PayloadLength": 0,
       "PayloadDebugContentSnippet": "",
       "Inputs": [],
@@ -20745,6 +20753,7 @@
         "Library/Bee/artifacts/1900b0aE.dag/Unity.VSCode.Editor.ref.dll",
         "Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll",
         "Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll",
+<<<<<<< HEAD
         "Assets/Apartment_Door/Scripts/DoorController.cs",
         "Assets/Apartment_Door/Scripts/KeyController.cs",
         "Assets/Apartment_Door/Scripts/PlayerMovement.cs",
@@ -20752,6 +20761,12 @@
         "Assets/Scripts/MoveCamera.cs",
         "Assets/Scripts/PlayerCam.cs",
         "Assets/Scripts/TimmyMovement.cs",
+=======
+        "Assets/Scripts/GameManager.cs",
+        "Assets/Scripts/MoveCamera.cs",
+        "Assets/Scripts/PlayerCam.cs",
+        "Assets/Scripts/PlayerMovement.cs",
+>>>>>>> Antonis
         "C:/Program Files/Unity/Hub/Editor/2022.3.9f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.9f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll",
         "Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.rsp"
@@ -21010,7 +21025,11 @@
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll.mvfrm.rsp",
       "DisplayName": "Writing Assembly-CSharp.dll.mvfrm.rsp",
       "ActionType": "WriteFile",
+<<<<<<< HEAD
       "PayloadOffset": 1578149,
+=======
+      "PayloadOffset": 1577998,
+>>>>>>> Antonis
       "PayloadLength": 9533,
       "PayloadDebugContentSnippet": "Library\\Bee\\artifacts\\mvdfrm\\U",
       "Inputs": [],
