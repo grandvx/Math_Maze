@@ -81,13 +81,11 @@ public class DoorController : MonoBehaviour
                 if (quizController != null && quizController.IsQuizAnsweredCorrectly())
                 {
                     txtToDisplay.GetComponent<Text>().text = "Press 'E' to Open";
-                    doorCollider.enabled = true;
                     doorCollider.enabled = false;
                 }
                 else
                 {
                     txtToDisplay.GetComponent<Text>().text = "Quiz answer required to open";
-                    doorCollider.enabled = false;
                     doorCollider.enabled = true;
                 }
             }
@@ -97,15 +95,19 @@ public class DoorController : MonoBehaviour
         {
             quizController.StartQuiz();
             quizCanvas.enabled = true;
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
 
 
             doorOpened = !doorOpened;           //The toggle function of door to open/close
 
           
+           
+                //quizController.IsQuizAnsweredCorrectly()
             
-            if (quizController.IsQuizAnsweredCorrectly() == true)
-            {
-                
+                Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.Locked;
+                quizCanvas.enabled = false;
             
                 if (doorState == DoorState.Closed && !doorAnim.isPlaying)
                 {
@@ -113,6 +115,8 @@ public class DoorController : MonoBehaviour
                     {
                         doorAnim.Play("Door_Open");
                         doorState = DoorState.Opened;
+                        
+
                     }
                     else if (keyNeeded && !gotKey)
                     {
@@ -145,7 +149,11 @@ public class DoorController : MonoBehaviour
                     doorAnim.Play("Door_Open");
                     doorState = DoorState.Opened;
                 }
-            }
+            
+                
+            
+            
+
         }
     }
 }

@@ -112,7 +112,8 @@ public class QuizController : MonoBehaviour
         if (quizCompleted)
         {
             Debug.Log("Quiz already completed.");
-            return;
+            quizCompleted = true;
+            return ;
         }
 
         if (selectedAnswerIndex == correctAnswerIndex)
@@ -131,6 +132,7 @@ public class QuizController : MonoBehaviour
             {
                 Debug.Log("Quiz completed!");
                 quizCompleted = true;
+                return ;
             }
         }
         else
