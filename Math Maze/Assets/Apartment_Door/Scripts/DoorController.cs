@@ -82,11 +82,13 @@ public class DoorController : MonoBehaviour
                 {
                     txtToDisplay.GetComponent<Text>().text = "Press 'E' to Open";
                     doorCollider.enabled = true;
+                    doorCollider.enabled = false;
                 }
                 else
                 {
                     txtToDisplay.GetComponent<Text>().text = "Quiz answer required to open";
                     doorCollider.enabled = false;
+                    doorCollider.enabled = true;
                 }
             }
         }
