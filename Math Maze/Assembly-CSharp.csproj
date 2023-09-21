@@ -45,7 +45,7 @@
      <Compile Include="Assets\Scripts\QuizController.cs" />
      <Compile Include="Assets\Apartment_Door\Scripts\KeyController.cs" />
      <Compile Include="Assets\Scripts\TimmyMovement.cs" />
-     <Compile Include="Assets\Scripts\GameManager.cs" />
+     <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Apartment_Door\Scripts\DoorController.cs" />
      <Compile Include="Assets\Scripts\MoveCamera.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

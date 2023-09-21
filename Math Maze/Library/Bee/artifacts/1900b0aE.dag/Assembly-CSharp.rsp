@@ -357,7 +357,7 @@
 "Assets/Apartment_Door/Scripts/DoorController.cs"
 "Assets/Apartment_Door/Scripts/KeyController.cs"
 "Assets/Apartment_Door/Scripts/PlayerMovement.cs"
-"Assets/Scripts/GameManager.cs"
+"Assets/Scripts/MainMenu.cs"
 "Assets/Scripts/MoveCamera.cs"
 "Assets/Scripts/PlayerCam.cs"
 "Assets/Scripts/QuizController.cs"
