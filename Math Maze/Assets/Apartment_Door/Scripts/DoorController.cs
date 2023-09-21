@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
 public class DoorController : MonoBehaviour
 {
@@ -27,6 +28,7 @@ public class DoorController : MonoBehaviour
 
     public Canvas quizCanvas;
 
+    private bool waitingForQuiz = true; // Declare the waitingForQuiz variable
 
     /// <summary>
     /// Initial State of every variables
@@ -92,6 +94,7 @@ public class DoorController : MonoBehaviour
         }
 
         if (Input.GetKeyDown(KeyCode.E) && playerInZone)
+        if (Input.GetKeyDown(KeyCode.E) && playerInZone && doorState == DoorState.Closed)
         {
             quizController.StartQuiz();
             quizCanvas.enabled = true;
@@ -101,22 +104,29 @@ public class DoorController : MonoBehaviour
 
             doorOpened = !doorOpened;           //The toggle function of door to open/close
 
-          
+             StartCoroutine(WaitForQuizToBeAnsweredCorrectly());
+        }
+    }
            
-                //quizController.IsQuizAnsweredCorrectly()
-            
+    private IEnumerator WaitForQuizToBeAnsweredCorrectly()
+    {
+        while (waitingForQuiz)
+        {
+            if (quizController.IsQuizAnsweredCorrectly())
+            {
+                Debug.Log("Quiz answered correctly!");
+
+                // Continue with door opening logic
                 Cursor.visible = false;
                 Cursor.lockState = CursorLockMode.Locked;
                 quizCanvas.enabled = false;
-            
+
                 if (doorState == DoorState.Closed && !doorAnim.isPlaying)
                 {
                     if (!keyNeeded)
                     {
                         doorAnim.Play("Door_Open");
                         doorState = DoorState.Opened;
-                        
-
                     }
                     else if (keyNeeded && !gotKey)
                     {
@@ -132,28 +142,31 @@ public class DoorController : MonoBehaviour
                     doorState = DoorState.Opened;
                 }
 
-                if (doorState == DoorState.Opened && !doorAnim.isPlaying)
-                {
-                    doorAnim.Play("Door_Close");
-                    doorState = DoorState.Closed;
-                }
+                // if (doorState == DoorState.Opened && !doorAnim.isPlaying)
+                // {
+                //     doorAnim.Play("Door_Close");
+                //     doorState = DoorState.Closed;
+                // }
 
-                if (doorState == DoorState.Jammed && !gotKey)
-                {
-                    if (doorAnim.GetClip("Door_Jam") != null)
-                        doorAnim.Play("Door_Jam");
-                    doorState = DoorState.Jammed;
-                }
-                else if (doorState == DoorState.Jammed && gotKey && !doorAnim.isPlaying)
-                {
-                    doorAnim.Play("Door_Open");
-                    doorState = DoorState.Opened;
-                }
-            
-                
-            
-            
+                // if (doorState == DoorState.Jammed && !gotKey)
+                // {
+                //     if (doorAnim.GetClip("Door_Jam") != null)
+                //         doorAnim.Play("Door_Jam");
+                //     doorState = DoorState.Jammed;
+                // }
+                // else if (doorState == DoorState.Jammed && gotKey && !doorAnim.isPlaying)
+                // {
+                //     doorAnim.Play("Door_Open");
+                //     doorState = DoorState.Opened;
+                // }
 
+                waitingForQuiz = false;
+            }
+            else
+            {
+                // Continue waiting and check again in the next frame
+                yield return null;
+            }
         }
     }
 }
