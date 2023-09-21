@@ -7,6 +7,8 @@ public class QuizController : MonoBehaviour
     public Text questionText;
     public List<Button> answerButtons;
 
+    public QuizQuestionSet questionSet; //Initialize questions
+
     private int currentQuestionIndex;
     private List<Question> questions;
 
@@ -22,7 +24,7 @@ public class QuizController : MonoBehaviour
 
     private void Start()
     {
-        InitializeQuestions();
+        //InitializeQuestions();
 
         // Display the first question
         
@@ -33,40 +35,36 @@ public class QuizController : MonoBehaviour
         // Reset quiz-related variables and start displaying the first question
         currentQuestionIndex = 0;
         quizCompleted = false;
+        InitializeQuestions();
         ShowQuestion(currentQuestionIndex);
     }
 
     private void InitializeQuestions()
     {
-        // Create your quiz questions here
-        questions = new List<Question>
+
+        if (questionSet != null)
         {
-            new Question
+            questions = ConvertToQuizControllerQuestions(questionSet.questions);
+        }
+    }
+
+private List<Question> ConvertToQuizControllerQuestions(List<QuizQuestion> quizQuestions)
+    {
+        List<Question> convertedQuestions = new List<Question>();
+
+        foreach (var quizQuestion in quizQuestions)
+        {
+            Question convertedQuestion = new Question
             {
-                questionText = "What is the capital of France?",
-                answerOptions = new List<string>
-                {
-                    "London",
-                    "Madrid",
-                    "Paris",
-                    "Berlin"
-                },
-                correctAnswerIndex = 2
-            },
-            new Question
-            {
-                questionText = "Which planet is known as the Red Planet?",
-                answerOptions = new List<string>
-                {
-                    "Earth",
-                    "Mars",
-                    "Venus",
-                    "Jupiter"
-                },
-                correctAnswerIndex = 1
-            },
-            // Add more questions here
-        };
+                questionText = quizQuestion.questionText,
+                answerOptions = quizQuestion.answerOptions,
+                correctAnswerIndex = quizQuestion.correctAnswerIndex
+            };
+
+            convertedQuestions.Add(convertedQuestion);
+        }
+
+        return convertedQuestions;
     }
 
     private void ShowQuestion(int questionIndex)
