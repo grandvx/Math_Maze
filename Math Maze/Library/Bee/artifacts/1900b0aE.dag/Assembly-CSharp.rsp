@@ -360,6 +360,7 @@
 "Assets/Scripts/GameManager.cs"
 "Assets/Scripts/MoveCamera.cs"
 "Assets/Scripts/PlayerCam.cs"
+"Assets/Scripts/QuizController.cs"
 "Assets/Scripts/TimmyMovement.cs"
 -langversion:9.0
 

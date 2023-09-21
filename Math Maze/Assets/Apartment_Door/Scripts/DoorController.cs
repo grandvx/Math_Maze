@@ -23,11 +23,18 @@ public class DoorController : MonoBehaviour
 
     DoorState doorState = new DoorState();      //To check the current state of the door
 
+    public QuizController quizController;
+
+    public Canvas quizCanvas;
+
+
     /// <summary>
     /// Initial State of every variables
     /// </summary>
     private void Start()
     {
+        quizCanvas.enabled = false;
+
         gotKey = false;
         doorOpened = false;                     //Is the door currently opened
         playerInZone = false;                   //Player not in zone
@@ -58,69 +65,84 @@ public class DoorController : MonoBehaviour
         txtToDisplay.SetActive(false);
     }
 
-    private void Update()
+   private void Update()
     {
-        //To Check if the player is in the zone
         if (playerInZone)
         {
-            if (doorState == DoorState.Opened)
-            {
-                txtToDisplay.GetComponent<Text>().text = "Press 'E' to Close ";
-                doorCollider.enabled = false;
-            }
-            else if (doorState == DoorState.Closed || gotKey)
-            {
-                txtToDisplay.GetComponent<Text>().text = "Press 'E' to Open ";
-                doorCollider.enabled = true;
-            }
-            // else if (doorState == DoorState.Jammed)
+            // if (doorState == DoorState.Opened)
             // {
-            //     txtToDisplay.GetComponent<Text>().text = "Needs Key";
-            //     doorCollider.enabled = true;
+            //     txtToDisplay.GetComponent<Text>().text = "Press 'E' to Close";
+            //     doorCollider.enabled = false;
             // }
+            // else
+            if (doorState == DoorState.Closed || gotKey)
+            {
+                // Check if the quiz has been answered correctly
+                if (quizController != null && quizController.IsQuizAnsweredCorrectly())
+                {
+                    txtToDisplay.GetComponent<Text>().text = "Press 'E' to Open";
+                    doorCollider.enabled = true;
+                }
+                else
+                {
+                    txtToDisplay.GetComponent<Text>().text = "Quiz answer required to open";
+                    doorCollider.enabled = false;
+                }
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.E) && playerInZone)
         {
+            quizController.StartQuiz();
+            quizCanvas.enabled = true;
+
+
             doorOpened = !doorOpened;           //The toggle function of door to open/close
 
-            if (doorState == DoorState.Closed && !doorAnim.isPlaying)
+          
+            
+            if (quizController.IsQuizAnsweredCorrectly() == true)
             {
-                if (!keyNeeded)
+                
+            
+                if (doorState == DoorState.Closed && !doorAnim.isPlaying)
+                {
+                    if (!keyNeeded)
+                    {
+                        doorAnim.Play("Door_Open");
+                        doorState = DoorState.Opened;
+                    }
+                    else if (keyNeeded && !gotKey)
+                    {
+                        if (doorAnim.GetClip("Door_Jam") != null)
+                            doorAnim.Play("Door_Jam");
+                        doorState = DoorState.Jammed;
+                    }
+                }
+
+                if (doorState == DoorState.Closed && gotKey && !doorAnim.isPlaying)
                 {
                     doorAnim.Play("Door_Open");
                     doorState = DoorState.Opened;
                 }
-                else if (keyNeeded && !gotKey)
+
+                if (doorState == DoorState.Opened && !doorAnim.isPlaying)
+                {
+                    doorAnim.Play("Door_Close");
+                    doorState = DoorState.Closed;
+                }
+
+                if (doorState == DoorState.Jammed && !gotKey)
                 {
                     if (doorAnim.GetClip("Door_Jam") != null)
                         doorAnim.Play("Door_Jam");
                     doorState = DoorState.Jammed;
                 }
-            }
-
-            if (doorState == DoorState.Closed && gotKey && !doorAnim.isPlaying)
-            {
-                doorAnim.Play("Door_Open");
-                doorState = DoorState.Opened;
-            }
-
-            if (doorState == DoorState.Opened && !doorAnim.isPlaying)
-            {
-                doorAnim.Play("Door_Close");
-                doorState = DoorState.Closed;
-            }
-
-            if (doorState == DoorState.Jammed && !gotKey)
-            {
-                if (doorAnim.GetClip("Door_Jam") != null)
-                    doorAnim.Play("Door_Jam");
-                doorState = DoorState.Jammed;
-            }
-            else if (doorState == DoorState.Jammed && gotKey && !doorAnim.isPlaying)
-            {
-                doorAnim.Play("Door_Open");
-                doorState = DoorState.Opened;
+                else if (doorState == DoorState.Jammed && gotKey && !doorAnim.isPlaying)
+                {
+                    doorAnim.Play("Door_Open");
+                    doorState = DoorState.Opened;
+                }
             }
         }
     }
