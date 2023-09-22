@@ -247,7 +247,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12022}
     - Class: 114
-      Script: {instanceID: 30826}
+      Script: {instanceID: 30822}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1830,4 +1830,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/MenuScene.unity
   - Assets/Scenes/MainScene.unity
-  playerPath: C:/Users/Grand/Documents/Math Maze/Math Maze.exe
+  playerPath: C:/Users/keray/OneDrive/Documents/GameInUnity/Math Maze.exe
