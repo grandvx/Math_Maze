@@ -20,7 +20,7 @@ MonoBehaviour:
     - 'b) 140 miles '
     - 'c) 150 miles '
     - d) 160 miles
-    correctAnswerIndex: 3
+    correctAnswerIndex: 2
   - questionText: 'If a triangle has angles measuring 30 degrees, 60 degrees, and
       90 degrees, which side is the longest? '
     answerOptions:
