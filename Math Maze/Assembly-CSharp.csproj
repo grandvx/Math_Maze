@@ -47,6 +47,7 @@
      <Compile Include="Assets\Scripts\TimmyMovement.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Apartment_Door\Scripts\DoorController.cs" />
+     <Compile Include="Assets\Scripts\QuizQuestions.cs" />
      <Compile Include="Assets\Scripts\MoveCamera.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
