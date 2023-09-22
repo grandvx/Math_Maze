@@ -71,12 +71,6 @@ public class DoorController : MonoBehaviour
     {
         if (playerInZone)
         {
-            // if (doorState == DoorState.Opened)
-            // {
-            //     txtToDisplay.GetComponent<Text>().text = "Press 'E' to Close";
-            //     doorCollider.enabled = false;
-            // }
-            // else
             if (doorState == DoorState.Closed || gotKey)
             {
                 // Check if the quiz has been answered correctly
@@ -104,7 +98,7 @@ public class DoorController : MonoBehaviour
 
             doorOpened = !doorOpened;           //The toggle function of door to open/close
 
-             StartCoroutine(WaitForQuizToBeAnsweredCorrectly());
+            StartCoroutine(WaitForQuizToBeAnsweredCorrectly());
         }
     }
            
@@ -141,24 +135,6 @@ public class DoorController : MonoBehaviour
                     doorAnim.Play("Door_Open");
                     doorState = DoorState.Opened;
                 }
-
-                // if (doorState == DoorState.Opened && !doorAnim.isPlaying)
-                // {
-                //     doorAnim.Play("Door_Close");
-                //     doorState = DoorState.Closed;
-                // }
-
-                // if (doorState == DoorState.Jammed && !gotKey)
-                // {
-                //     if (doorAnim.GetClip("Door_Jam") != null)
-                //         doorAnim.Play("Door_Jam");
-                //     doorState = DoorState.Jammed;
-                // }
-                // else if (doorState == DoorState.Jammed && gotKey && !doorAnim.isPlaying)
-                // {
-                //     doorAnim.Play("Door_Open");
-                //     doorState = DoorState.Opened;
-                // }
 
                 waitingForQuiz = false;
             }

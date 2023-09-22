@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98cf4bef0545fa541bd6af7eca93b89f, type: 3}
+  m_Name: door8
+  m_EditorClassIdentifier: 
+  questions:
+  - questionText: 'If a car travels at a speed of 60 miles per hour, how many miles
+      will it travel in 2.5 hours? '
+    answerOptions:
+    - 'a) 120 miles '
+    - 'b) 140 miles '
+    - 'c) 150 miles '
+    - d) 160 miles
+    correctAnswerIndex: 3
+  - questionText: 'If a triangle has angles measuring 30 degrees, 60 degrees, and
+      90 degrees, which side is the longest? '
+    answerOptions:
+    - 'a) The side opposite the 30-degree angle '
+    - 'b) The side opposite the 60-degree angle '
+    - c) The side opposite the 90-degree angle
+    - 'd) All sides are equal in length  '
+    correctAnswerIndex: 2

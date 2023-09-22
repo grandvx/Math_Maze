@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: door2
   m_EditorClassIdentifier: 
   questions:
-  - questionText: How much is 1 + 1?
+  - questionText: 'If you have 3 apples and you eat 1, how many apples do you have
+      left? '
     answerOptions:
-    - 2
-    - 3
-    - 21
-    - 69
-    correctAnswerIndex: 0
+    - a) 0
+    - 'b) 1 '
+    - 'c) 2 '
+    - 'd) 3 '
+    correctAnswerIndex: 2

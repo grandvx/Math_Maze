@@ -13,17 +13,10 @@ MonoBehaviour:
   m_Name: door1
   m_EditorClassIdentifier: 
   questions:
-  - questionText: What is the capital of France?
+  - questionText: What is 5 + 3?
     answerOptions:
-    - London
-    - Madrid
-    - Paris
-    - Berlin
-    correctAnswerIndex: 2
-  - questionText: Which planet is known as the Red Planet?
-    answerOptions:
-    - Earth
-    - Mars
-    - Venus
-    - Jupiter
+    - a) 7
+    - b) 8
+    - c) 9
+    - 'd) 10  '
     correctAnswerIndex: 1

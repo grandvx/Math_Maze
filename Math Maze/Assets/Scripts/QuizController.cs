@@ -24,9 +24,6 @@ public class QuizController : MonoBehaviour
 
     private void Start()
     {
-        //InitializeQuestions();
-
-        // Display the first question
         
     }
 

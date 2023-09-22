@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98cf4bef0545fa541bd6af7eca93b89f, type: 3}
+  m_Name: door7
+  m_EditorClassIdentifier: 
+  questions:
+  - questionText: 'Solve for x: 2x + 7 = 15. '
+    answerOptions:
+    - 'a) 4 '
+    - 'b) 6 '
+    - c) 8
+    - 'd) 10  '
+    correctAnswerIndex: 2
+  - questionText: 'What is 20% of 150? '
+    answerOptions:
+    - 'a) 10 '
+    - 'b) 20 '
+    - 'c) 30 '
+    - d) 40
+    correctAnswerIndex: 3
